@@ -46,7 +46,7 @@ class Main {
 
 
     private static void registerInZookeeper(int port) {
-        CuratorFramework curatorFramework = CuratorFrameworkFactory.newClient("localhost:2181", new RetryNTimes(5, 1000))
+        CuratorFramework curatorFramework = CuratorFrameworkFactory.newClient("norwaydoorway.corp.gq1.yahoo.com:2181", new RetryNTimes(5, 1000))
         curatorFramework.start()
         ServiceInstance<Void> serviceInstance = ServiceInstance.builder()
                 .uriSpec(new UriSpec("{scheme}://{address}:{port}"))
